@@ -10,7 +10,7 @@
     <h1>New SpaSalon</h1>
     <form action="<c:url value="/user/spasalons/new"/>" method="post">
         <label>Name:<br>
-            <input type="text" name="name" maxlength="50" size="30" required>
+            <input type="text" name="nameSalon" maxlength="50" size="30" required>
         </label>
         <label>Cost:<br>
             <input type="number" name="cost" placeholder="50" max="2000" min="1">

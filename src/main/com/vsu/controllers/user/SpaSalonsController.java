@@ -17,7 +17,7 @@ public class SpaSalonsController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Long idProfile = (Long) req.getSession().getAttribute("idProfile");
-        req.setAttribute("spaSalonList", spaSalonService.getSpaSalonList(idProfile));
+        req.setAttribute("SpaSalonList", spaSalonService.getSpaSalonList(idProfile));
         req.getRequestDispatcher("/WEB-INF/user/spasalons.jsp").forward(req, resp);
     }
 }

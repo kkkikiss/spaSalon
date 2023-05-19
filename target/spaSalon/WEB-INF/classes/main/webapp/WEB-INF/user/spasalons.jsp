@@ -10,6 +10,10 @@
 <div class="logout">
     <a href="<c:url value="/user/logout"/>">Logout</a>
 </div>
+<h1>Your SpaSalons List</h1>
+<div class="btn-container">
+    <a href="spasalons/new" class="btn">Add new salon</a>
+</div>
 <c:if test="${empty SpaSalonList}">
     <div class="empty">Empty.</div>
 </c:if>
@@ -24,13 +28,19 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${SpaSalonList}" var="spaSalon">
+        <c:forEach items="${SpaSalonList}" var="SpaSalon">
             <tr>
                 <td><c:out value="${spaSalon.getNameSalon()}"/> </td>
                 <td><c:out value="${spaSalon.getCost()}"/> </td>
                 <td>
-                    <form about="spa-salons/edit" method="get">
-                        <input type="hidden" name="idSpaSalon" value="<c:out value="${spaSalon.getIdSalon()}"/>"><br>
+                    <form about="/user/spasalons/edit" method="get">
+                        <input type="hidden" name="idSalon" value="<c:out value="${spaSalon.getIdSalon()}"/>"><br>
+                        <input type="submit" value="Edit">
+                    </form>
+                </td>
+                <td>
+                    <form action="/user/spasalons/delete" method="post">
+                        <input type="hidden" name="idSalon" value="<c:out value="${spaSalon.getId()}"/>"><br>
                         <input type="submit" value="Delete">
                     </form>
                 </td>

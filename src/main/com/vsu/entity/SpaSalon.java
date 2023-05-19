@@ -24,6 +24,7 @@ public class SpaSalon {
 
     }
 
+
     public Long getId() {
         return id;
     }
