@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.logout {
+    text-align: right;
+    padding: 15px;
+    font-size: 14pt;
+}
+
+h1, .empty {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #2c006c;
+    border-collapse: collapse;
+}
+
+table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #002b67;
+}
+
+table td {
+    border: 1px solid #e50b0b;
+    padding: 5px;
+}
+
+.btn {
+    background: #117cd2;
+    color: #ce416f;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.btn-container {
+    text-align: center;
+    margin: 50px
+}
